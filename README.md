@@ -17,6 +17,11 @@ Clone the repository into a directory accessible by your web server:
 $ cd /var/www/html
 $ git clone https://github.com/peter-slovak/OpcacheMonitor.git opcache-monitor
 $ cd opcache-monitor
+# Don't forget to check out necessary Chart.js libraries
+$ git submodule init
+$ git submodule update
+# OR fetch them manually
+$ rmdir chartjs; git clone https://github.com/nnnick/Chart.js.git chartjs
 ```
 Create a map of servers you wish to monitor, either manually (see `examples/example.servers.json`) or with a script (`examples/generate_servers.py`). Save the configuration into `servers.json` and open the URL (in this case `http://localhost/opcache-monitor`). If you run the Client side locally, make sure you have a webserver running.
 
