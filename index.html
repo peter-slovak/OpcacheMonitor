@@ -8,14 +8,7 @@
     <script type='text/javascript'>
 
         // Basic responsivity
-        $(window).resize( function() {
-            if ($(window).width() < 1450) {
-                $( ".server" ).css("width", "100%");
-            }
-            else {
-                $( ".server" ).css("width", "50%");
-            }
-        });
+        $(window).resize( be_responsive );
 
         $(document).ready( function() {
             show_dashboard();

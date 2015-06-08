@@ -155,6 +155,8 @@ function build_layout() {
                   });
             });
         });
+
+        be_responsive();
     });
 }
 
@@ -298,6 +300,16 @@ function load_elements_data(elem_ids, category) {
     });
 
     refresh_elements_timeout[category] = setTimeout(load_elements_data, refresh_stats_ms, elem_ids, category);
+}
+
+
+function be_responsive() {
+    if ($(window).width() < 1450) {
+        $( ".server" ).css("width", "100%");
+    }
+    else {
+        $( ".server" ).css("width", "50%");
+    }
 }
 
 
