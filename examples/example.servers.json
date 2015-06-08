@@ -1,0 +1,39 @@
+// If you wish to use this file in production, remove the comments
+// (it has to be json-loadable)
+{
+    // A unique category name. These are used in HTML element ids,
+    // so they should only contain characters from range [-_a-zA-Z0-9]
+    "php54": {
+
+        // The visible category description
+        "alias": "PHP 5.4 pools", 
+
+        // A map of servers in this category. Again, the keys should stick
+        // to the range [-_a-zA-Z0-9]
+        //
+        // The values are IP or FQDN addresses, optionally with a port.
+        //
+        // The port is useful if, for example, you have a loadbalancer proxy
+        // on port 80 and various PHP versions/configurations behind it.
+        //
+        // In case of PHP-FPM, you probably have one pool per domain/subdomain.
+        // In that case, use the domain name as server address to make sure that
+        // the opcache_get_status() function gets executed in the right context.
+        //
+        // You can set the specific path to OPcache API scripts in main.js.
+        "servers": {
+            "fpm-pool-com": "94.220.121.150",
+            "fpm-pool-php7dev-vpn": "10.10.2.15:8085",
+            "another-pool-com-dev": "dev.another-pool.com",
+            "another-pool-com-production": "another-pool.com"
+        }
+    }, 
+
+    "php55": {
+        "alias": "PHP 5.5 pools", 
+        "servers": {
+            "fpm-pool-com-php55": "php55.fpm-pool.com",
+            "fpm-pool-com-php55-unusual-port": "php55.fpm-pool.com:44544"
+        }
+    
+}

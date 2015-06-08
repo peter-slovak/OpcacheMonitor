@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title> OpCache Monitor </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="jquery-1.11.3.min.js"></script>
+    <script src="chartjs/Chart.js"></script>
+    <script src="main.js"></script>
+    <script type='text/javascript'>
+
+        // Basic responsivity
+        $(window).resize( function() {
+            if ($(window).width() < 1450) {
+                $( ".server" ).css("width", "100%");
+            }
+            else {
+                $( ".server" ).css("width", "50%");
+            }
+        });
+
+        $(document).ready( function() {
+            show_dashboard();
+
+            $( "#settings" ).click( function(e) {
+                e.preventDefault();
+                show_settings();
+            });
+
+            $( "#dashboard" ).click( function(e) {
+                e.preventDefault();
+                show_dashboard();
+            });
+        });
+        
+    </script>
+</head>
+
+<body>
+    <div id='header'>
+        <div id='description'>
+            <span id='title'> Opcache Monitor </span> <span id='version'> v0.1 </span>
+        </div>
+        <div id='menu'>
+            <a href='#' class='button' id='dashboard'><span> Dashboard </span></a>
+            <a href='https://github.com/peter-slovak/OpcacheMonitor' target='blank' class='button square'><img src='git.png'></img></a>
+        </div>
+    </div>
+    <div id='main'></div>
+</body>
+</html>
