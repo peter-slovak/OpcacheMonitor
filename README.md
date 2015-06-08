@@ -1,6 +1,9 @@
 # OpcacheMonitor
 A simple dashboard for monitoring a number of PHP instances or FPM pools that use OPcache. If you only need to keep an eye on one instance, you can also have a look at some of the other projects (my favorite being <a href="https://github.com/PeeHaa/OpCacheGUI">PeeHaa's OpCacheGUI</a>). This one trades off more specific and advanced functions like single-file invalidation for an overview of the most important metrics of your PHP pools.
 
+### Requirements
+- PHP >= 5.4.0 (Server side)
+
 ### Installation - Server side
 For every PHP pool or OPcache instance you want to monitor, clone the repository into a directory visible by that instance's PHP interpreter. You only need the `api/` subdirectory on Server side.
 ```sh
